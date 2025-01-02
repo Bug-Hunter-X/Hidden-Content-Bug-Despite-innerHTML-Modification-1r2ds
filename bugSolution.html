@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Uncommon HTML Bug Solution</title>
+<style>
+  #myDiv {
+    /* Remove or modify the CSS rule that was hiding the element */
+    display: block;
+  }
+</style>
+</head>
+<body>
+  <div id="myDiv">
+    This text will be hidden.
+  </div>
+
+  <script>
+    // Correctly using innerHTML to set the div's content
+    document.getElementById("myDiv").innerHTML = "<p>This text should be visible.</p>";
+  </script>
+</body>
+</html>
