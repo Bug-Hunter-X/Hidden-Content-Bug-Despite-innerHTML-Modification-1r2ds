@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Uncommon HTML Bug</title>
+</head>
+<body>
+  <div id="myDiv">
+    This text will be hidden.
+  </div>
+
+  <script>
+    // Incorrectly using innerHTML to set the div's content
+    document.getElementById("myDiv").innerHTML = "<p>This text should be visible.</p>";
+
+    // The bug is that the div's content will not appear as it's hidden by default
+    // due to the CSS rule applied in an external stylesheet. This is not a typical error
+    // and highlights the need to check all styles that affect an element's visibility.
+  </script>
+</body>
+</html>
